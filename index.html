@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Callisto - Recruitment Form</title>
+    <link rel="icon" type="image/png" href="/Club_Logo.jpeg">
+    <meta name="description" content="Join our Space Club Recruitment process. Create your Microsoft account and fill out the recruitment form to begin your journey to the stars.">
+    <meta name="keywords" content="space club, recruitment, student organization, space exploration, Microsoft account">
+    
+    <!-- Mobile-specific meta tags -->
+    <meta name="theme-color" content="#040711">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Callisto">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Prevent zoom on input focus for iOS -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/space-theme.css">
+</head>
+<body class="space-root">
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <!-- 3D Background Canvas -->
+    <canvas id="three-canvas" class="three-canvas"></canvas>
+    
+    <!-- Starfield Background (CSS fallback) -->
+    <div class="starfield" aria-hidden="true">
+        <div class="stars layer-1"></div>
+        <div class="stars layer-2"></div>
+        <div class="stars layer-3"></div>
+        <div class="nebula-gradient"></div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2 class="loading-title">Initializing Space Systems...</h2>
+            <p class="loading-subtitle">Preparing your journey to the stars</p>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Header Section -->
+        <header class="header-section">
+            <div class="container">
+                <h1 class="main-title">
+                    <span class="title-line" style="text-align: center; margin: 0 auto;">Join us at Callisto</span>
+                </h1>
+                <p class="main-subtitle">Your Journey to the Stars Begins Here</p>
+            </div>
+        </header>
+        
+        <!-- Main Content Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-card">
+                    <div class="instructions">
+                        <h2 class="section-title">Ready to Explore the Universe?</h2>
+                        <div class="instruction-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Create Your Microsoft Account</h3>
+                                    <p>To participate in the recruitment, please first create a Microsoft account using the link below.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Fill Out the Recruitment Form</h3>
+                                    <p>Once your account is ready, proceed to fill out the recruitment form.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <a href="https://signup.microsoft.com/get-started/signup?sku=018f6278-19f3-455c-8940-df2e59e59ca7&products=018f6278-19f3-455c-8940-df2e59e59ca7&ali=1&culture=en-us&country=us" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-primary btn-microsoft">
+                            <span class="btn-icon">🚀</span>
+                            <span class="btn-text">Create Your Microsoft Account</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        
+                        <a href="https://forms.office.com/r/JxDB2YLhz5" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-secondary btn-form">
+                            <span class="btn-icon">📋</span>
+                            <span class="btn-text">Access Recruitment Form</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Floating 3D Elements -->
+        <div class="floating-elements" aria-hidden="true">
+            <div class="spacecraft spacecraft-1"></div>
+            <div class="spacecraft spacecraft-2"></div>
+            <div class="satellite"></div>
+            <div class="meteor meteor-1"></div>
+            <div class="meteor meteor-2"></div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Callisto &copy; 2025 . All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="scripts/three-scene.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+
+
