@@ -1,0 +1,205 @@
+/* Space Club Recruitment Landing Page - Space Theme Enhancements */
+
+/* 3D Canvas Styling */
+.three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Enhanced Glass Morphism Effects */
+.content-card {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Glow Effects for Interactive Elements */
+.btn-primary {
+  box-shadow: 
+    0 0 20px rgba(122, 162, 255, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  box-shadow: 
+    0 0 30px rgba(122, 162, 255, 0.5),
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+  box-shadow: 
+    0 0 15px rgba(155, 122, 255, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+  box-shadow: 
+    0 0 25px rgba(155, 122, 255, 0.4),
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Step Number Glow Effects */
+.step-number {
+  box-shadow: 
+    0 0 15px rgba(122, 162, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.step:hover .step-number {
+  box-shadow: 
+    0 0 25px rgba(122, 162, 255, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Title Glow Enhancement */
+.main-title {
+  text-shadow: 
+    0 0 20px rgba(122, 162, 255, 0.5),
+    0 0 40px rgba(122, 162, 255, 0.3),
+    0 0 60px rgba(122, 162, 255, 0.1);
+}
+
+/* Section Title Glow */
+.section-title {
+  text-shadow: 
+    0 0 15px rgba(155, 122, 255, 0.4),
+    0 0 30px rgba(155, 122, 255, 0.2);
+}
+
+/* Enhanced Floating Elements with Glow */
+.spacecraft-1 {
+  box-shadow: 0 0 20px rgba(122, 162, 255, 0.4);
+  filter: drop-shadow(0 0 10px rgba(122, 162, 255, 0.3));
+}
+
+.spacecraft-2 {
+  box-shadow: 0 0 20px rgba(155, 122, 255, 0.4);
+  filter: drop-shadow(0 0 10px rgba(155, 122, 255, 0.3));
+}
+
+.satellite {
+  box-shadow: 0 0 20px rgba(98, 255, 167, 0.4);
+  filter: drop-shadow(0 0 10px rgba(98, 255, 167, 0.3));
+}
+
+.satellite::before {
+  box-shadow: 0 0 15px rgba(98, 255, 167, 0.5);
+}
+
+.meteor {
+  box-shadow: 0 0 10px var(--accent-warning);
+  filter: drop-shadow(0 0 5px var(--accent-warning));
+}
+
+/* Loading Screen Space Theme */
+.loading-screen {
+  background: linear-gradient(135deg, 
+    var(--bg-primary) 0%, 
+    var(--bg-secondary) 50%, 
+    var(--bg-primary) 100%);
+}
+
+.loading-title {
+  text-shadow: 
+    0 0 15px rgba(122, 162, 255, 0.5),
+    0 0 30px rgba(122, 162, 255, 0.3);
+}
+
+/* Enhanced Starfield Effects */
+.stars {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+/* Nebula Enhancement */
+.nebula-gradient {
+  filter: blur(30px) saturate(150%);
+  mix-blend-mode: screen;
+}
+
+/* Responsive Glow Adjustments */
+@media (max-width: 768px) {
+  .main-title {
+    text-shadow: 
+      0 0 15px rgba(122, 162, 255, 0.4),
+      0 0 30px rgba(122, 162, 255, 0.2);
+  }
+  
+  .section-title {
+    text-shadow: 
+      0 0 10px rgba(155, 122, 255, 0.3),
+      0 0 20px rgba(155, 122, 255, 0.1);
+  }
+  
+  .btn-primary {
+    box-shadow: 
+      0 0 15px rgba(122, 162, 255, 0.3),
+      0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-secondary {
+    box-shadow: 
+      0 0 10px rgba(155, 122, 255, 0.2),
+      0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* High Performance Mode */
+@media (prefers-reduced-motion: no-preference) {
+  .content-card,
+  .btn,
+  .step {
+    will-change: transform, box-shadow;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .content-card {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.08) 0%, 
+      rgba(255, 255, 255, 0.03) 50%, 
+      rgba(255, 255, 255, 0.01) 100%);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .floating-elements,
+  .starfield,
+  .nebula-gradient,
+  .three-canvas {
+    display: none !important;
+  }
+  
+  .content-card {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .btn {
+    background: #f0f0f0 !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}
+
+
